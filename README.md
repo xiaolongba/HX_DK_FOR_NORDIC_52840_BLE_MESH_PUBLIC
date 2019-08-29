@@ -1,2 +1,46 @@
-# HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC
-è¯¥ä»£ç ä»“ä¸»è¦ç”¨äºå‘å¸ƒåŸºäºçº¢æ—­å¼€å‘æ¿çš„BLE MESHå…¬å¼€æ•™ç¨‹ï¼ˆThis repository is mainly to publish the BLE MESH public tutorials based on the HX DKï¼‰
+<!--
+ * @Description: The index of HX Mesh Tutorials
+ * @Author: Helon CHEN
+ * @Date: 2019-07-27 18:02:49
+ * @LastEditTime: 2019-08-25 15:20:22
+ * @LastEditors: Please set LastEditors
+ -->
+# ºìĞñÎŞÏß---Sig Mesh½Ì³ÌÄ¿Â¼
+## »ù´¡ÖªÊ¶
+1. [SIG MESHµÄ¼ò½é](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/SIG%20MESH%E7%AE%80%E4%BB%8B.md)
+2. [Nordic MESH SDK ÎÄµµ¿ò¼Ü¼ò½é](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/Nordic%20MESH%20SDK%20%E6%96%87%E6%A1%A3%E6%A1%86%E6%9E%B6%E7%AE%80%E4%BB%8B.md)
+3. [SIG MESH¸÷¸ö½ÇÉ«µÄ¹¦ÄÜ¼ò½é](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/SIG%20MESH%E5%90%84%E4%B8%AA%E8%A7%92%E8%89%B2%E7%9A%84%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B.md)
+4. [SIG MESHĞ­Òé¸÷¸ö²ãµÄ×÷ÓÃ](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/SIG%20MESH%E5%8D%8F%E8%AE%AE%E5%90%84%E4%B8%AA%E5%B1%82%E7%9A%84%E4%BD%9C%E7%94%A8.md)
+5. [Ê²Ã´ÊÇElementºÍModel](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BB%80%E4%B9%88%E6%98%AFElement%E5%92%8CModel.md)
+6. [ÈçºÎÊ¹ÓÃSES´î½¨SIG MESH¿ª·¢»·¾³](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8SES%E6%90%AD%E5%BB%BASIG%20MESH%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.md)
+7. [ÈçºÎÊ¹ÓÃVSCode´î½¨SIG MESH¿ª·¢»·¾³](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8VSCode%E6%90%AD%E5%BB%BASIG%20MESH%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.md)
+
+## ĞÂÊÖÈëÃÅ
+1. [Mesh BeaconÖ¡¸ñÊ½](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)
+1. [PB-GATTÈëÍø¹ı³Ì]()---Î´Íê³É
+1. [PB-ADVÈëÍø¹ı³Ì]()---Î´Íê³É
+1. [SIG MESHµÚÒ»¸öÊµÀı---Generic On Off Model]()---Î´Íê³É
+1. [¸÷¸ö²ãÖ¡°ü¸ñÊ½Ïê½â]()---Î´Íê³É
+
+## ³õ³öÃ©Â®
+1. [Configuration ModelÇ³Îö]()---Î´Íê³É
+1. [Health ModelÇ³Îö]()---Î´Íê³É
+1. [Proxy NodeµÄ¹¤×÷Á÷³Ì]()---Î´Íê³É
+1. [Relay NodeµÄ¹¤×÷Á÷³Ì]()---Î´Íê³É
+1. [Friend NodeµÄ¹¤×÷Á÷³Ì]()---Î´Íê³É
+1. [Low Power NodeµÄ¹¤×÷Á÷³Ì]()---Î´Íê³É
+
+## ²½ÈëÉç»á
+1. [Multi RoleµÄÊµÏÖ]()---Î´Íê³É
+1. [Vendor ModelµÄÇ³Îö]()---Î´Íê³É
+1. [´´½¨ºìĞñModel]()---Î´Íê³É
+1. [º­À¨ËùÓĞMesh Role½ÚµãµÄ¹¤³Ì]()---Î´Íê³É
+1. [½ÓÈëÌìÃ¨¾«Áé]()---Î´Íê³É
+
+## °²È«
+1. [IV¸üĞÂ¹ı³Ì]()---Î´Íê³É
+1. [KEY¸üĞÂ¹ı³Ì]()---Î´Íê³É
+
+# SIG MESH¼¼Êõ½»Á÷
+1. GithubµÄIssues
+2. [ºìĞñ¹Ù·½ÎŞÏß¼¼ÊõÂÛÌ³](http://bbs.wireless-tech.cn/)
