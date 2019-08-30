@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2019-08-30 21:58:29
+ * @LastEditTime: 2019-08-30 21:59:39
  * @LastEditors: Please set LastEditors
  -->
 # 红旭无线---Sig Mesh教程目录
@@ -43,4 +43,4 @@
 
 # SIG MESH技术交流
 1. Github的Issues
-2. [红旭官方无线技术论坛](http://bbs.wireless-tech.cn/)
+2. [红旭无线官方技术论坛](http://bbs.wireless-tech.cn/)

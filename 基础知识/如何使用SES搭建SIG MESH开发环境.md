@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: Helon CHEN
  * @Date: 2019-08-15 21:08:42
- * @LastEditTime: 2019-08-15 23:39:55
+ * @LastEditTime: 2019-08-30 22:00:02
  * @LastEditors: Please set LastEditors
  -->
 # 前言
@@ -28,7 +28,7 @@ SES是[SEGGER Embedded Studio](https://www.segger.com/products/development-tools/
 
         这个也是一个非常重要的资料，可以很方便地查阅各个API的功能及使用方法，具体的下载链接[请点我](http://developer.nordicsemi.com/nRF5_SDK/)。当然，如果你觉得下载太麻烦且懒得下载，你也可以在我们红旭的服务器上查看 **(由于服务器是在国内，所以打开的响应速度会很快)**，具体的链接[请点我](http://nordic.wireless-tech.cn/nrf5/index.html)
 # 环境搭建
-下载完SIG MESH以及nRF SDK开发包之后，两者可以不用放在同一个路径或者目录下，它们彼此相互独立又互相依懒。因为我们知道，SIG MESH是基于低功耗蓝牙的一套应用层协议，那么如何让它们两者之间关联起来呢？具体的操作如下：
+下载完SIG MESH以及nRF SDK开发包之后，两者可以不用放在同一个路径或者目录下，它们彼此相互独立又互相依依赖。因为我们知道，SIG MESH是基于低功耗蓝牙的一套应用层协议，那么如何让它们两者之间关联起来呢？具体的操作如下：
 
 1. 使用SES打开SIG MESH的示例工程，这里小编以**light_switch_server**为例；
 ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/light_switch_server_nrf52840.png)
