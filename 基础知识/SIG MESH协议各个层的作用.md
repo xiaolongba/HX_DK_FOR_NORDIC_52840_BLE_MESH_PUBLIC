@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-08-06 22:05:02
- * @LastEditTime: 2019-08-17 12:56:31
+ * @LastEditTime: 2019-08-30 22:35:10
  * @LastEditors: Please set LastEditors
  -->
 # 前言
@@ -10,11 +10,11 @@
 
 # SIG MESH 协议层一览
 在我们开始讲解各个层的作用之前，先看看整个SIG MESH协议层是长什么样的。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_system_architecture.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_system_architecture.png)
 
 由上图可知，SIG MESH由**模型层**、**基础模型层**、**访问层**、**上层传输层**、**下层传输层**、**网络层**、**承载层**组成；这个时候可能读者会问，为什么**低功耗蓝牙核心规范**不被包含在内呢？
 > 在回答这个问题之前，我们先看看Mesh数据包的格式：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Mesh_packet.svg?sanitize=true)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Mesh_packet.svg?sanitize=true)
 从上面的mesh数据包的分解图来看，这个时候我想读者们明白为啥**低功耗蓝牙核心规范**不被包括在内了吧？mesh的数据包实质是利用低功耗蓝牙收发数据，至于mesh的数据包是如何拼装、怎么组装、以及加解密等等那才是mesh协议栈做的事情。因此，我们也可以简单地说mesh协议栈就是一个基于BLE的Big profile。另外，小编要提到的是：**最大的不分组的能给应用层用的有效载荷包就是11字节！！！注意，我这里是仅仅指的是不分组时的最大PDU，实际一次可以发送最大380字节的mesh数据，但是要分包**
 
 从上面的内容，我想起码对各个层的作用有了一个大概的了解了，对于这个层数据包的详解，我们会在后面的章节根据实际的案例捉包讲解。这里小编就不在此处开展，本章节的重要是让大家知道mesh协议栈各层的作用是什么。
@@ -25,22 +25,22 @@ mesh数据包的收发是需要媒介的，从上面的内容我们可以知道，其利用了低功耗蓝牙进行数
 
     那么GATT承载的作用到底是什么呢？就是让不支持mesh协议栈的设备与mesh网络的节点间接地进行通信；而其又是通过什么方式与网络的节点进行交流呢？就是使用“代理协议”，没错！就是Proxy节点，其是可以实现这些GATT特性的，并且同时支持GATT承载和ADV承载 **（有的人可能会问为啥还要支持ADV承载？这不是废话吗，如果不支持的话怎么让不支持mesh协议的设备的数据送到mesh网络中去啊，就是因为正常mesh网络中的数据收发都是通过ADV承载实现的）**
     
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/talking_about_proxy_node.gif)
+    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/talking_about_proxy_node.gif)
     
     也就是说支持代理协议的节点是支持**mesh proxy service** 以及广播行为的，为了让大家更好的理解，我们可以看看下所示的拓扑图：
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_proxy_service.png)
+    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_proxy_service.png)
 
 - ADV
 
     ADV承载利用BLE的GAP广播和扫描来传送和接收网络PDU，如下图所示：
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_message_ad_type.png)
+    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_message_ad_type.png)
 
 ## 网络层
 网络层是SIG MESH最重要的组成部分，其功能可以分为以下几个部分：
 
 1. 定义了被承载层转输的底层传输层PDU的网络PDU格式，初看可能会有点拗口，但是你可以上面章节的Mesh数据包分解图，你就能理解了。底层传输PDU被合并并组装成网络PDU，然后再被转送到承载层；
 2. 它解密并验证和转发在输入接口接收到的转送进来的信息到上层传输层，和或者输出接口，并加密和验证并转发派发到输出网络接口的输出信息；这里读者可能会有疑问，什么是接口？还特么分输入和输出？
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/doubts_emoticon.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/doubts_emoticon.png)
 
     不管是输入还是输出接口，它们都叫做 **“网络接口”**。
 
@@ -58,7 +58,7 @@ mesh数据包的收发是需要媒介的，从上面的内容我们可以知道，其利用了低功耗蓝牙进行数
 >比如A-》B，那么就A而言，B就是A的对端设备
 
 但是，上层传输层的**加密访问载荷包**最大是380字节，而底层传输层想要传送这么大的数据量怎么办呢？这个时候只能采用分段重组的方式了。所以如果要传送的数据量大于11字节，那么此时就必须要分段了。而对于对端设备而言，如果接收到的不是分包的上层传输层PDU的底层传输PDU的话，它的底层传输层则直接把该PDU传给上层传输层，否则需要将这些分包的上层传输层PDU的底层传输PDUs重组，一旦完成重组刚上传至上层传输层；可能文字描述不易理解，我们可以结合下图就可以很清楚地理解了。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/segmentation_reassembly.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/segmentation_reassembly.png)
 
 显然，又会有细心的读者发现，原来分段重组是在底层传输层处理实现的啊，随着慢慢地一步步地剖析，是不是感觉自己对mesh又懂了一些:bowtie:。
 

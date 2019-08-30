@@ -1,3 +1,10 @@
+<!--
+ * @Description: In User Settings Edit
+ * @Author: your name
+ * @Date: 2019-08-29 23:52:59
+ * @LastEditTime: 2019-08-30 22:35:27
+ * @LastEditors: Please set LastEditors
+ -->
 # 前言
 基本上目前比较主流的一些组网技术，如Zigbee、Thread以及一些私有的Mesh技术，均会引入角色这个概念即想将一个mesh网络搭建起来，务必各个角色各司其职，这个网络才会完善且稳定。如果还是觉得有点抽象，我们可以把**mesh网络**看成一个 **"公司"**，一个公司有董事长、总经理、部门经理、普通职工，这样才是一个正常公司的组织架构。同样的，SIG Mesh网络这个组织框架也是如此:smile:。
 
@@ -20,7 +27,7 @@
 
 为了让上述枯燥无味的文字，更加好理解这里我借用Mesh spec的一张图来让上面的文字更加易于理解。
 
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/topology_of_mesh_network.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/topology_of_mesh_network.png)
 
 > 但是，上面所示的**S节点**，小编认为还是有点问题，既然S节点可以通过GATT承载跟T节点进行数据交互，那么**S节点**应该也支持代理特性，即**proxy feature**。
 
@@ -30,7 +37,7 @@
 ## 代理
 同理，**具备代理特性且代理特性被使能的节点才能称为“代理节点”**，其作用是**在GATT和ADV承载之间接收和转发网络信息**。这个时候，可能又有读者被**承载**这个新名词绕晕了，一会儿ADV承载一会儿GATT承载。
 
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/crying_emoticon_package.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/crying_emoticon_package.png)
 
 - ADV承载
     > 通过BLE的广播数据将mesh的载荷包发送出去

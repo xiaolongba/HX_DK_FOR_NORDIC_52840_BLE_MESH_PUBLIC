@@ -2,12 +2,12 @@
  * @Description: In User Settings Edit
  * @Author: Helon CHEN
  * @Date: 2019-08-11 13:03:45
- * @LastEditTime: 2019-08-17 13:30:16
+ * @LastEditTime: 2019-08-30 22:36:01
  * @LastEditors: Please set LastEditors
  -->
 # 前言
 原本小编是想将**Element(元素)和Model(模型)** 拆分开成两篇独立的文章来讲解，但是实在没有办法做到；因为它们两者之间的绑定实在太深了，如何非要将他们剥离之后单独讲解会很容易导致理解不连贯；如果用过BLE的读者应该就会比较好理解这两个新的名词，其分别类似于profile与service的关系。当然啦，新人也不必悲观，下面我用两幅图来让大家先有一个基础的了解。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/element_model_vs_profile_service.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/element_model_vs_profile_service.png)
 
 # 什么是Element(元素)
 元素包含定义一个节点功能的实例，每个节点都可以包括一个或者多个元素，且至少存在一个叫**首要元素**的元素，就类似于一个BLE设备可以包括一个或者多个profile一样。举个例子，一个调光的灯泡通常会有一个元素，这个元素就会向外公开其具备的一个或者多个功能，例如**通用开关**和**亮度控制**功能。在这个例子中，**Light Lightness Server Model**就用于实现开/关和亮度等级控制功能。
@@ -18,13 +18,13 @@
 2. 用于传感器的控制
 
 首要元素用于灯泡控制，第二个元素用于传感器的控制，如下图所示：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/model_element.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/model_element.png)
 
 节点中的每个元素都有一个唯一的地址，称为单播地址。这允许每个元素独立于同一节点内的其他元素进行寻址，也就是说可以通过单播地址找到节点的各个元素。
 
 # 什么是Model(模型)
 起初，小编刚看到这个名词一时半会也难于理解这是啥玩意啊？就跟下图的反应一样：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/what_is_model.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/what_is_model.gif)
 
 其实，模型就是定义了节点的真正的功能，其汇集了一个元素的**状态**、**转换**、**绑定**、**信息**的概念。也就是小编上面提及到的Model(模型)就类似于正常BLE设备的Service。而Mesh的模型又分为三种类型：
 
@@ -32,10 +32,10 @@
 服务端模型可以具有跨越一个或多个元素的一个或多个状态，服务器模型定义了模型可以发送和接收的消息，它还定义了基于这些消息的Element的行为。换句话说，服务端模型公开了可以被客户端读取或控制的元素的状态。一个服务端模型的应用实例就是：对外公开传感器状态的**传感器**或者存储当前灯光状态的**灯泡**
 ## 客户端模型
 客户端模型定义了一组请求并更改服务端状态的消息。例如，ON/OFF开关（作为客户端运行）可以向ON/OFF服务端发送消息以更改设备的状态
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Client_-server_model_communication.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Client_-server_model_communication.png)
 ## 控制端模型(就是同时支持客户端和服务端模型)
 最终的应用程序可以使用服务端模型或客户端模型，或两者以及控制逻辑。服务端和客户端模型的任意组合都会产生控制模型。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Control_model_communication.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Control_model_communication.png)
 但是上图的 **“Message A/B/C”** 的箭头方向应该是有问题的，正确的应该是**Client-->Service**，除了上面的之外，模型可以扩展其他模型的功能。也就是说，模型可以是分层的。例如，**灯光亮度模型**扩展了**通用开关服务端模型**和**通用等级服务端模型**。这意味着如果你在应用程序中实现**灯光亮度模型**，你将获得所有控制灯光、通用等级以及通用开关的功能。不扩展其他模型的模型称为 **“根模型”**
 
 # 状态与属性

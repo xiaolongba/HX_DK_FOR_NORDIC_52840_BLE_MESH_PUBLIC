@@ -2,13 +2,13 @@
  * @Description: In User Settings Edit
  * @Author: your name
  * @Date: 2019-07-28 13:31:42
- * @LastEditTime: 2019-08-14 09:07:53
+ * @LastEditTime: 2019-08-30 22:33:40
  * @LastEditors: Please set LastEditors
  -->
 # 前言
 在开始真正的基于Nordic BLE芯片的SIG Mesh开发之前，我们需务必先了解Nordic官方提供的SDK包的框架，**不要一上来就操作猛如虎，后来发现自己250**
 
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/crazy%20operation.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/crazy%20operation.png)
 
 # 如何下载Mesh SDK
 目前下载Mesh SDK开发包的方式有两种：
@@ -22,16 +22,16 @@
     ```c
     git clone https://github.com/NordicSemiconductor/nRF5-SDK-for-Mesh.git
     ```
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Mesh%20downloading.gif)
+    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Mesh%20downloading.gif)
   - 更新  
     ```c
     git pull
     ```
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_sdk_update.png)
+    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_sdk_update.png)
 
 # SDK一览
 介绍完如何下载SDK之后，现在让我们看看Nordic_MESH SDK的文件框架是怎么样的。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_sdk_contents.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_sdk_contents.png)
 
 - .git
   

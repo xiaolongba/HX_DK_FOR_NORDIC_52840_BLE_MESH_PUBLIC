@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: Helon CHEN
  * @Date: 2019-08-17 13:36:51
- * @LastEditTime: 2019-08-18 23:15:59
+ * @LastEditTime: 2019-08-30 22:37:24
  * @LastEditors: Please set LastEditors
  -->
 # 前言
@@ -37,17 +37,17 @@
 
 # 环境搭建
 安装完上述的软件之后，我们就可以直接用Visual Studio Code打开nRF5-SDK-for-Mesh了，如下所示：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/open_nRF5_SDK_for_Mesh_with_vscode.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/open_nRF5_SDK_for_Mesh_with_vscode.gif)
 
 同时，打开之后还需要安装上述提及到的Visual Studio Code插件：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Extensions_for_debug.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Extensions_for_debug.png)
 
 ## 配置Cortex Debug插件
 该插件主要是使能在Visual Studio Code中调试Cortex-M内核的MCU，是一个非常不错的插件。由于我们使用的是JLINK调试仿真器，所以我们要告诉这个插件我们JLINK的位置，这样我们再按下F5时，其才会调用JLINK的GDB来进行调试。为实现上面的目的，我们可以这样做：<code>Manage</code>--><code>Settings</code>--><code>Extensions</code>--><code>Cortex-Debug Configuration</code>--><code>JLink GDBServer Path</code>--><code>Edit in settings.json</code>,然后填充自己的JLinkGDBServerCL的路径，下面是小编的路径
 ```c
 C:\\Program Files (x86)\\SEGGER\\JLink\\JLinkGDBServerCL.exe
 ```
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Cortex_Debug_Configuration.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Cortex_Debug_Configuration.gif)
 
 完成上面的配置之后，我们还需要再配置下我们当前调试的是什么型号的MCU、什么调试接口等等，只有这些都完成了才能完美地使用该插件。以下是小编的配置内容，具体的操作请看如下的动图：
 ```json
@@ -73,26 +73,26 @@ C:\\Program Files (x86)\\SEGGER\\JLink\\JLinkGDBServerCL.exe
     ]
 }
 ```
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Cortex_Debug_Configuration_Json.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Cortex_Debug_Configuration_Json.gif)
 
 ## 编译
 完成上面的配置之后，接下来我们就要利用CMake对工程进行编译并生成ELF、HEX等文件了。但是，由于我们今天的主角是nRF52840_xxAA，然而工程默认的是nRF52832_xxAA，所以我们还要修改一下相关的文件，如下图所示：
 
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/modification_for_platform_cmake.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/modification_for_platform_cmake.png)
 
 只有这个时候，我们才可以真正地对工程进行编译，具体的操作如下：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/CMake_build_project.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/CMake_build_project.gif)
 
 然后，我们就可以在根目录看到新建了一个**build**文件夹。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/project_builded.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/project_builded.png)
 
 ## 调试下载
 编译完成之后，此时应该就会生成相应的ELF、HEX等文件了，那么我们这个时候就可以利用Cortex Debug插件进行调试下载，具体的操作请看如下的动图：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/project_debug.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/project_debug.gif)
 
 ## 如何生成nRF5-SDK-for-Mesh离线手册
 目前，官方并没有把nRF5-SDK-for-Mesh离线手册放在官方的服务器上，而是将生成的方法告诉了我们；目前，我也搞不明白官方的想法。但是，没有关系我们按照官方的方法操作也是可以得到的，具体的操作如下所示：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/doc_generation.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/doc_generation.gif)
 
 最后，我们可以在**build**文件夹下，找到生成的离线文件：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/doc_generation.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/doc_generation.png)

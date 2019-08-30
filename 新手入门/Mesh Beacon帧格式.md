@@ -2,14 +2,14 @@
  * @Description: In User Settings Edit
  * @Author: Helon CHEN
  * @Date: 2019-08-17 13:34:18
- * @LastEditTime: 2019-08-25 15:24:58
+ * @LastEditTime: 2019-08-30 22:38:06
  * @LastEditors: Please set LastEditors
  -->
 # 前言
 基础篇章已经讲解完成，我坚信大伙应该对SIG Mesh已经有了大概的概念。接下来，让我们继续前进深层次地了解这些概念是如何变成现实中看不见摸不着，但是又能监测到的Mesh信标是怎么样的。
 # SIG Mesh Beacon载荷包
 关注红旭无线Mesh教程的朋友，我相信大家应该对**SIG MESH协议各个层的作用**中提到的SIG Mesh载荷包还有印象吧？Mesh的数据包是BLE广播包的另外一种体现，其大体的帧格式基本一致。那么，它究竟长什么样子呢？如下图所示：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Mesh_Beacon_Package.svg?sanitize=true)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Mesh_Beacon_Package.svg?sanitize=true)
 
 从上图可知，其实Mesh Beacon的帧格式还是比较简单的。接下来让小编带着你们**剥洋葱**，一层一层地剖析它，每一个字段都是干什么的？起到什么作用？如果条件允许，建议听着[《洋葱--杨宗纬》](https://music.163.com/#/mv?id=5441126)这首歌再看这篇文章，效果更佳:smile:！为了让大家的理解不局限于纯理论中，此次小编直接采用真实的示例工程来拆段式地讲解最终的数据包是长什么样的。无疑这种效果是最佳的，**届时我们也会专门开设视频讲解，敬请期待！！！<---此处是软广**；接下来，交待下此时的相关开发环境及工具：
 - nRF52840DK或者红旭无线的开发板
@@ -20,18 +20,18 @@
 
 - Unprovisioned Mesh Beacon
 
-  ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_beacon_header.png)
-  ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_beacon_data_payload.png)
+  ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_beacon_header.png)
+  ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_beacon_data_payload.png)
 
 - Secure Network Beacon
 
-  ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/Secure_Network_Beacon.png)
+  ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Secure_Network_Beacon.png)
 
 由上面的抓包的截图，我们可以看出跟帧格式的那幅图基本上是一一对应的。
 ## Unprovisioned Mesh Beacon
 ### Len
 这个字段的意思是说这个mesh beacon包有效数据的长度大小 **(不包含Len字段占用的长度)**,也就是说上述的抓包图的整个mesh beacon的长度是25字节，**Len字段**占用一个字节，那么**Len字段**就表示接下来的有效数据的长度，这个跟普通的广播包是一模一样的套路。当然，这也是非常正常的现象；因为，mesh本来就是利用了BLE的广播包进行数据传送。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/mesh_beacon_valid_data.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_beacon_valid_data.png)
 
 ### Type
 该字段用于往外告诉周边的设备说，它是一包Mesh Beacon数据包，有别于其他普通的BLE广播包。
@@ -64,7 +64,7 @@
 
 ### OOB Information
 首先，映入眼帘的是**OOB**这个单词。我估计有很多读者看到这个单词的第一反应就是 **“What the hell?”**。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/what.gif)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/what.gif)
 
 OOB的全称是**Out of Band，也就是带外数据的意思**，其实说白了就是采用与当前所使用的方式不同的方式去传送数据，如NFC、条形码、二维码等等。但是，前提是该设备必须具备这样的能力 **(有点类似于BLE中配对时的IO Capabilities)**，否则你将不需要设置该字段的内容。目前，Mesh Spec v1.0.1支持的OOB Information如下所示：
 
