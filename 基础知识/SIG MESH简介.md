@@ -1,10 +1,12 @@
 <!--
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-08-29 23:52:59
- * @LastEditTime: 2019-08-30 22:15:27
+ * @Author: 临时工
+ * @Date: 2019-07-28 13:26:25
+ * @LastEditTime: 2019-12-05 21:37:18
  * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
  -->
+
+
 # 前言
 继Zigbee、Thread、WiFi Mesh之后，物联网行业中的组网阵营又冒出了一匹黑马---**BLE Mesh**。然而在这之前，BLE的组网能力在江湖上是排不上名号的。鉴于IPHONE 4S对BLE的普及起到了火箭级的推动作用，使得BLE几乎是智能穿戴届的**一哥**。可是随着越来越复杂的IoT应用，相较于之前点对点的数据传输，组网的需求越来越旺盛。因此，基于BLE的广播模式的多对多网状网络将彻底打破人们固有的成见，这也引起了无线通讯半导体芯片各领头养的关注如**CSR、Broadcom、NXP、Nordic、Dialog**等公司都推出过自己私有的蓝牙Mesh协议 **（Telink也因其较早推出BLE Mesh而一战而红）**。然而，原本是一件让物联网振奋人兴的事却因为各大厂商之间的MESH很难做到互联互通，为了避免重走当年Zigbee的老路。这个时候有位老大哥就站出来了![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/%E5%A4%A7%E4%BD%AC%E5%B8%A6%E5%B8%A6%E6%88%91.jpg)
 

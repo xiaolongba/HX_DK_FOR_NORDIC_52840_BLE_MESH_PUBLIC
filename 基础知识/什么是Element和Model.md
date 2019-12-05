@@ -1,13 +1,13 @@
 <!--
  * @Description: In User Settings Edit
- * @Author: Helon CHEN
+ * @Author: 临时工
  * @Date: 2019-08-11 13:03:45
- * @LastEditTime: 2019-08-30 22:36:01
+ * @LastEditTime: 2019-12-05 21:37:34
  * @LastEditors: Please set LastEditors
  -->
 # 前言
 原本小编是想将**Element(元素)和Model(模型)** 拆分开成两篇独立的文章来讲解，但是实在没有办法做到；因为它们两者之间的绑定实在太深了，如何非要将他们剥离之后单独讲解会很容易导致理解不连贯；如果用过BLE的读者应该就会比较好理解这两个新的名词，其分别类似于profile与service的关系。当然啦，新人也不必悲观，下面我用两幅图来让大家先有一个基础的了解。
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/element_model_vs_profile_service.png)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PRIVATE/blob/master/Material%20library/element_model_vs_profile_service.png)
 
 # 什么是Element(元素)
 元素包含定义一个节点功能的实例，每个节点都可以包括一个或者多个元素，且至少存在一个叫**首要元素**的元素，就类似于一个BLE设备可以包括一个或者多个profile一样。举个例子，一个调光的灯泡通常会有一个元素，这个元素就会向外公开其具备的一个或者多个功能，例如**通用开关**和**亮度控制**功能。在这个例子中，**Light Lightness Server Model**就用于实现开/关和亮度等级控制功能。

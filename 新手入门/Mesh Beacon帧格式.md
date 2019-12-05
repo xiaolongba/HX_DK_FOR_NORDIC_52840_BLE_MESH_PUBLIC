@@ -1,15 +1,15 @@
 <!--
  * @Description: In User Settings Edit
- * @Author: Helon CHEN
+ * @Author: 临时工
  * @Date: 2019-08-17 13:34:18
- * @LastEditTime: 2019-08-30 22:38:06
+ * @LastEditTime: 2019-12-05 21:39:37
  * @LastEditors: Please set LastEditors
  -->
 # 前言
 基础篇章已经讲解完成，我坚信大伙应该对SIG Mesh已经有了大概的概念。接下来，让我们继续前进深层次地了解这些概念是如何变成现实中看不见摸不着，但是又能监测到的Mesh信标是怎么样的。
 # SIG Mesh Beacon载荷包
 关注红旭无线Mesh教程的朋友，我相信大家应该对**SIG MESH协议各个层的作用**中提到的SIG Mesh载荷包还有印象吧？Mesh的数据包是BLE广播包的另外一种体现，其大体的帧格式基本一致。那么，它究竟长什么样子呢？如下图所示：
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Mesh_Beacon_Package.svg?sanitize=true)
+![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Mesh_Beacon_Data.png)
 
 从上图可知，其实Mesh Beacon的帧格式还是比较简单的。接下来让小编带着你们**剥洋葱**，一层一层地剖析它，每一个字段都是干什么的？起到什么作用？如果条件允许，建议听着[《洋葱--杨宗纬》](https://music.163.com/#/mv?id=5441126)这首歌再看这篇文章，效果更佳:smile:！为了让大家的理解不局限于纯理论中，此次小编直接采用真实的示例工程来拆段式地讲解最终的数据包是长什么样的。无疑这种效果是最佳的，**届时我们也会专门开设视频讲解，敬请期待！！！<---此处是软广**；接下来，交待下此时的相关开发环境及工具：
 - nRF52840DK或者红旭无线的开发板
@@ -36,6 +36,12 @@
 ### Type
 该字段用于往外告诉周边的设备说，它是一包Mesh Beacon数据包，有别于其他普通的BLE广播包。
 
+- 0x29
+
+    表示这个是PB-ADV数据类型，常用于采用广播承载时发送Generic Provisioning PDU
+- 0x2A
+
+    表示这个是Mesh-Message数据类型，用于入网之后进行数据交互的数据格式
 - 0x2B
     
     表示这个是Mesh Beacon数据类型
@@ -117,7 +123,10 @@ OOB的全称是**Out of Band，也就是带外数据的意思**，其实说白了就是采用与当前所使用
 顾名思义就是网络ID号，也就是说当前Secure Network Beacon所加入的Mesh网络的ID号；这个ID一般是不会变的，除非你加入了新的另外一个网络或者NetKey更新了才会变更。
 
 ### IV Index
-同样的，该字段表示这个mesh网络当前的IV索引号。为什么要说是当前的呢？这表明这个IV Index是可以更新的。
+同样的，该字段表示这个mesh网络当前的IV索引号。为什么要说是当前的呢？这表明这个IV Index是可以更新的。那么该IV Index又有什么作用呢？
+
+1. 用于应用层和网络层的身份验证和加密
+2. 当**Sequence Number**快要溢出时，发起**IV Update**程序，让**IV Index**值增加，从而防止**Sequence Number**被重复使用
 
 ### Authentication Value 
 最后一个字段，看单词就知道肯定又是跟加密相关的。该值是通过以下的公式算出来的：

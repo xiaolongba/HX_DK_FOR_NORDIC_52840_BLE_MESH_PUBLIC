@@ -1,10 +1,11 @@
 <!--
- * @Description: In User Settings Edit
- * @Author: your name
- * @Date: 2019-08-29 23:52:59
- * @LastEditTime: 2019-08-30 22:35:27
+ * @Author: 临时工
+ * @Date: 2019-08-04 14:29:58
+ * @LastEditTime: 2019-12-05 21:37:05
  * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
  -->
+
 # 前言
 基本上目前比较主流的一些组网技术，如Zigbee、Thread以及一些私有的Mesh技术，均会引入角色这个概念即想将一个mesh网络搭建起来，务必各个角色各司其职，这个网络才会完善且稳定。如果还是觉得有点抽象，我们可以把**mesh网络**看成一个 **"公司"**，一个公司有董事长、总经理、部门经理、普通职工，这样才是一个正常公司的组织架构。同样的，SIG Mesh网络这个组织框架也是如此:smile:。
 
