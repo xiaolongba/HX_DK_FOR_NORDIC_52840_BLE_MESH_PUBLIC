@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2019-12-05 21:14:23
+ * @LastEditTime: 2019-12-05 21:41:33
  * @LastEditors: Please set LastEditors
  -->
 # 红旭无线---Sig Mesh教程目录
@@ -18,7 +18,7 @@
 ## 新手入门
 1. [Mesh Beacon帧格式](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)
 1. [PB-GATT入网过程]()---待发布
-1. [PB-ADV入网过程]()---待发布
+1. [PB-ADV入网过程](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/PB-ADV%E5%85%A5%E7%BD%91%E8%BF%87%E7%A8%8B.md)
 1. [SIG MESH第一个实例---Generic On Off Model]()---待发布
 1. [各个层帧包格式详解]()---待发布
 
