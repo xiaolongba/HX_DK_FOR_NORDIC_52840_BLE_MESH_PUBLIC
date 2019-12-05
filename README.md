@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2019-08-30 21:59:39
+ * @LastEditTime: 2019-12-05 21:14:23
  * @LastEditors: Please set LastEditors
  -->
 # 红旭无线---Sig Mesh教程目录
@@ -20,7 +20,7 @@
 1. [PB-GATT入网过程]()---待发布
 1. [PB-ADV入网过程]()---待发布
 1. [SIG MESH第一个实例---Generic On Off Model]()---待发布
-1. [各个层帧包格式详解]()---未完成
+1. [各个层帧包格式详解]()---待发布
 
 ## 初出茅庐
 1. [Configuration Model浅析]()---未完成
