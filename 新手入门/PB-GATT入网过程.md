@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: ÁÙÊ±¹¤
  * @Date: 2019-08-31 19:49:08
- * @LastEditTime: 2019-12-16 13:56:39
+ * @LastEditTime: 2019-12-16 20:48:00
  * @LastEditors: Please set LastEditors
  -->
 # Ç°ÑÔ
@@ -393,7 +393,7 @@ Proxy¿Í»§¶ËÍ¨¹ýProxy PDUÓëProxy·þÎñ¶Ë½øÐÐÊý¾Ý½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 µ±new deviceÍê³ÉÈÏÖ¤Êý×ÖµÄÊäÈëÖ®ºó£¬»áÏòprovisioner·¢ËÍ¸ÃPDU£»È»¶ø£¬Á÷³ÌÊÇÔõÃ´ÑùµÄÄØ£¿ÎÒÃÇ¿ÉÒÔ²Î¿¼[Authentication Method¡¢Action¡¢SizeÕÂ½ÚÖÐ0x03ËùÊ¾µÄÄÚÈÝ](#Authentication-method¡¢action¡¢Size)£»Í¬Ê±£¬ÎÒÃÇÒ²Òª×¢Òâ£¬¸ÃPDUÊÇ²»Ð¯´øÈÎºÎ²ÎÊýµÄ¡£
 
 ### Provisioning Confirmation
-ProvisionerÓënew device»á¸÷×Ô½«Ä¿Ç°ÎªÖ¹ËùÓÐÒÑ¾­½»»¥¹ýµÄPDU **£¨°üÀ¨·¢ËÍµÄºÍ½ÓÊÕµ½µÄ£¬ÈçProvisioning_Invite_PDU¡¢Provisioning_Capabilities_PDU¡¢Provisioning_Start_PDU¡¢Provisioning_Public_key_PDU£¬µ«ÊÇÒª×¢ÒâµÄÊÇ½ö½öÊÇPDU²»°üÀ¨Ö¡Í·µÄÀàÐÍ£¬ÈçInvite¡¢CapabilitiesµÈµÈ£©**,°üÀ¨OOBÈÏÖ¤ÖµÒÔ¼°»¹Î´·¢ËÍ³öÀ´µÄËæ»úÊý£¬½«ËüÃÇ¼ÓÃÜÖ®ºóµÄÏ£¹þÖµ·¢ËÍ¶Ô¶ËÉè±¸£¬ÒÔ±ã½øÐÐÏÂÒ»²½µÄÈ·ÈÏ£¬µ«ÊÇ¸ÃPDUÃûËäËµÊÇconfirmation£¬ÊµÖÊÆä»¹²»ÄÜÍêÈ«µØÈ·ÈÏ¡£ËüÃÇÈÔÈ»ÐèÒªÖªµÀ¶Ô·½µÄËæ»úÊý·½¿ÉÈ·ÈÏ·¢ËÍµÄConfirmationÊÇ·ñÆ¥Åä¡£¸ÃPDUµÄÖ¡¸ñÊ½±È½Ï¼òµ¥£¬ÈçÏÂËùÊ¾£º
+ProvisionerÓënew device»á¸÷×Ô½«Ä¿Ç°ÎªÖ¹ËùÓÐÒÑ¾­½»»¥¹ýµÄPDU **£¨°üÀ¨·¢ËÍµÄºÍ½ÓÊÕµ½µÄ£¬ÈçProvisioning_Invite_PDU¡¢Provisioning_Capabilities_PDU¡¢Provisioning_Start_PDU¡¢Provisioning_Public_key_PDU£¬µ«ÊÇÒª×¢ÒâµÄÊÇ½ö½öÊÇPDU²»°üÀ¨Ö¡Í·µÄÀàÐÍ£¬ÈçInvite¡¢CapabilitiesµÈµÈ£©**,°üÀ¨OOBÈÏÖ¤ÖµÒÔ¼°»¹Î´·¢ËÍ³öÀ´µÄËæ»úÊý£¬½«ËüÃÇ¼ÓÃÜÖ®ºóµÄ¹þÏ£Öµ·¢ËÍ¶Ô¶ËÉè±¸£¬ÒÔ±ã½øÐÐÏÂÒ»²½µÄÈ·ÈÏ£¬µ«ÊÇ¸ÃPDUÃûËäËµÊÇconfirmation£¬ÊµÖÊÆä»¹²»ÄÜÍêÈ«µØÈ·ÈÏ¡£ËüÃÇÈÔÈ»ÐèÒªÖªµÀ¶Ô·½µÄËæ»úÊý·½¿ÉÈ·ÈÏ·¢ËÍµÄConfirmationÊÇ·ñÆ¥Åä¡£¸ÃPDUµÄÖ¡¸ñÊ½±È½Ï¼òµ¥£¬ÈçÏÂËùÊ¾£º
 
 | Field | Size(octets)|Notes|
 |-----|-----|-----|
@@ -475,5 +475,5 @@ ProvisionerÓënew device»á¸÷×Ô½«Ä¿Ç°ÎªÖ¹ËùÓÐÒÑ¾­½»»¥¹ýµÄPDU **£¨°üÀ¨·¢ËÍµÄºÍ½ÓÊÕµ
 |0x08|Cannot Assign Addresses|The device cannot assign consecutive unicast addresses to all elements|
 |0x09|RFU|Reserved for Future Use|
 
-ÖÁ´Ë£¬Õû¸öÈëÍøÁ÷³ÌÍê³É¡£¸ãÁËÕâÃ´¶à²½Öè¾ÍÊÇÎªÁË»ñÈ¡µÃµ½×îÖÕµÄprovisioning dataµÄÄÚÈÝ¡£ÕâÒ²ÒâÎ¶×Å¸ÃÆª½ÚÒ²×îÖÕÍê¸åÁË£¬¿ÉÄÜÓÐÈË¾õµÃÕâ¸öÌ«¸´ÔÓÁË£¬ÆäÊµÐ¡±àÐ´Íê±¾ÆªÎÄÕÂÒ²¿ì¡°Á÷Àá¡±ÁË£¬ÎªÁËÏÔÏÖÍêÕûµÄÈëÍø¹ý³ÌºÍ¸÷¸öÏ¸½Ú£¬×ã×ãÐ´ÁË¿ìÒ»¸öÐÇÆÚÁË£¡£¡£¡²»×ãÒâÍâµÄ»°£¬Ó¦¸ÃÊÇÈ«Íø×îÏêÏ¸µÄÈëÍøÁ÷³ÌËµÃ÷ÁË¡£
+ÖÁ´Ë£¬Õû¸öÈëÍøÁ÷³ÌÍê³É¡£¸ãÁËÕâÃ´¶à²½Öè¾ÍÊÇÎªÁË»ñÈ¡µÃµ½×îÖÕµÄprovisioning dataµÄÄÚÈÝ¡£ÕâÒ²ÒâÎ¶×Å¸ÃÆª½ÚÒ²×îÖÕÍê¸åÁË£¬¿ÉÄÜÓÐÈË¾õµÃÕâ¸öÌ«¸´ÔÓÁË£¬ÆäÊµÐ¡±àÐ´Íê±¾ÆªÎÄÕÂÒ²¿ì¡°Á÷Àá¡±ÁË£¬ÎªÁËÏÔÏÖÍêÕûµÄÈëÍø¹ý³ÌºÍ¸÷¸öÏ¸½Ú£¬×ã×ãÐ´ÁË¿ìÒ»¸öÐÇÆÚÁË£¡£¡£¡²»³öÒâÍâµÄ»°£¬Ó¦¸ÃÊÇÈ«Íø×îÏêÏ¸µÄÈëÍøÁ÷³ÌËµÃ÷ÁË¡£
 ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/I_AM_SO_DIFFICULT.gif)
