@@ -5,6 +5,8 @@
  * @LastEditTime: 2019-12-16 14:00:45
  * @LastEditors: Please set LastEditors
  -->
+[![](./Material%20library/HX_DK_LOGO_Brochure.png)](https://shop166249478.taobao.com/?spm=2013.1.1000126.2.83541257ISvzi3)
+
 # 红旭无线---Sig Mesh教程目录
 ## 基础知识
 1. [SIG MESH的简介](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/SIG%20MESH%E7%AE%80%E4%BB%8B.md)
