@@ -2,7 +2,7 @@
  * @Description: In User Settings Edit
  * @Author: ÁÙÊ±¹¤
  * @Date: 2019-08-31 19:49:08
- * @LastEditTime: 2019-12-16 20:48:00
+ * @LastEditTime: 2020-02-26 14:57:00
  * @LastEditors: Please set LastEditors
  -->
 # Ç°ÑÔ
@@ -17,7 +17,7 @@
 
 ÄÇÃ´£¬±¾ÕÂ½ÚÖ÷Òª½²½âÈçºÎÍ¨¹ıPB-GATTµÄ·½Ê½£¬½«unprovisioned device¼ÓÈëSIG MeshÍøÂç¡£ÖÁÓÚPB-ADVÏà¹ØµÄ»°Ìâ£¬ÎÒÃÇ·ÅÔÚÏÂÒ»ÕÂ½Ú½øĞĞÏê½â¡£
 
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Let's_start.png)
+![](../Material%20library/Let's_start.png)
 
 # ÈëÍøÁ÷³Ì
 ¶ÔSIG MeshµÄÈëÍøÁ÷³Ì£¬ÎÒÏë´ó¶àÊıÖ»ÖªµÀÈçÏÂµÄÎå¸ö²½¾Û£º
@@ -28,41 +28,54 @@
 - ÈÏÖ¤
 - Æô¶¯ÅäÖÃÊı¾İ·Ö·¢
 
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Provisioning_Behavior.png)
+![](../Material%20library/Provisioning_Behavior.png)
 
 È»¶ø£¬ÕæÊµµØÊ¹ÓÃÖĞÕâĞ©²½ÖèÓÖÏ¸»¯³ÉºÜ¶àĞ¡µÄÏ¸½Ú¡£ÄÇÃ´£¬ÕâĞ©Ï¸Ğ¡µÄÏ¸½Úµ½µ×ÓÖÊÇÔõÃ´ÑùµÄ£¿ÏêÇéÈçÏÂÍ¼ËùÊ¾£º
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/The_process_for_provisioning.png)
+![](../Material%20library/The_process_for_provisioning.png)
 
 ´ÓÉÏÍ¼¿ÉÖª£¬Õû¸öÈëÍøµÄ¹ı³Ì»¹ÊÇ±È½Ï¸´ÔÓÁË£¬×öÁËÕâÃ´¶à½»»¥¾ÍÊÇÎªÁË×îÖÕµÄ**provisioning data**ÖĞµÄÖµ¡£ÔÚnew deviceÏòprovisioner·¢ËÍprovisioning complete PDUÖ®ºó£¬new device»ªÀöµØ×ªÉíÎªNode¡£½ÓÏÂÀ´£¬ÈÃÎÒÃÇâÒ¶¡½âÅ£Ò»²ãÒ»²ãµØÈ¥½Ò¿ªËüÃÇµÄÕæÃæÄ¿¡£
-## Mesh Proxy Service
-ÔÚ¿ªÊ¼ÆÊÎöÕâÎå¸öÈëÍø²½ÖèÖ®Ç°£¬Ğ¡±à¾õµÃ»¹ÊÇÓĞ±ØÒªÏÈÁË½âÒ»ÏÂÊ²Ã´ÊÇmesh proxy service£¬¸Ã·şÎñÖ÷Òª¾ÍÁ½¸öÌØÕ÷Öµ£º
-- mesh proxy data in
+## Mesh Provisioning Service
+ÔÚ¿ªÊ¼ÆÊÎöÕâÎå¸öÈëÍø²½ÖèÖ®Ç°£¬Ğ¡±à¾õµÃ»¹ÊÇÓĞ±ØÒªÏÈÁË½âÒ»ÏÂÊ²Ã´ÊÇmesh provisioning service£¬¸Ã·şÎñÖ÷Òª¾ÍÁ½¸öÌØÕ÷Öµ£º
+- mesh provisioning data in **(Write Without Response)**
 
-    ¸ÃÌØÕ÷ÖµÖ÷ÒªÓÃÓÚprovisionerÏònew device»òÕßnode·¢ËÍÏà¹ØµÄPDU
-- mesh proxy data out
+    ¸ÃÌØÕ÷ÖµÖ÷ÒªÓÃÓÚprovisioning clientÏòprovisioning server·¢ËÍprovisioning pdu
+- mesh provisioning data out **(Notify)**
     
-    ¸ÃÌØÕ÷ÖµÖ÷ÒªÓÃÓÚnew device»òÕßnode·¢ËÍÏà¹ØµÄPDUÖÁprovisioner
+    ¸ÃÌØÕ÷ÖµÖ÷ÒªÓÃÓÚprovisioning serverÏòprovisioning client·¢ËÍprovisioning pdu
+
+![](../Material%20library/mesh_provisioning_service.png) 
+
+´ÓÉÏÍ¼µÄÃèÊö£¬provisioning pdusµÄ½»»¥¶¼ÊÇÔÚprovisioning serviceÖĞ½øĞĞµÄ¡£mesh provisioning data inÓëmesh provisioning data outÖĞµÄ½øºÍ³öµÄ²ÎÕÕÎïÊÇÉè±¸±¾Éí£»¸Ã·şÎñµÄ×÷ÓÃ½öÓÃÓÚunprovisioned deviceÓëprovisionerÓÃÓÚÈëÍøÊı¾İ½»»¥Ê±Ê¹ÓÃ¡£
+## Mesh Proxy Service
+²»µ«ÓĞprovisioning service£¬Mesh GATT ServicesÖĞ»¹ÓĞÒ»¸ö½Ğ**Mesh Proxy Service**£¬¸Ã·şÎñÖ÷Òª¾ÍÁ½¸öÌØÕ÷Öµ£º
+- mesh proxy data in **(Write Without Response)**
+
+    ¸ÃÌØÕ÷ÖµÖ÷ÒªÓÃÓÚprovisionerÏònode·¢ËÍproxy pdus **(²»°üÀ¨provisioning pdu)**
+- mesh proxy data out **(Notify)**
+    
+    ¸ÃÌØÕ÷ÖµÖ÷ÒªÓÃÓÚnode·¢ËÍproxy pdus **(²»°üÀ¨provisioning pdu)**ÖÁprovisioner
 
 ÎªÁËÈÃÉÏÊöµÄÓï¾ä¸ü¼ÓÒ×ÓÚÀí½â£¬ÎÒÃÇ¿ÉÒÔ²é¿´ÏÂÍ¼ÖĞËùÊöµÄmesh proxy serviceµÄ¹¤×÷Ô­Àí£º
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/mesh_proxy_service.png)
+![](../Material%20library/mesh_proxy_service.png)
 
-´ÓÉÏÃæÎÒÃÇ¿ÉÒÔºÜÇå³şµØÁË½âµ½£¬²»¹ÜÊÇ**provisioning PDU**»¹ÊÇ**Mesh Network PDU**¶¼¿ÉÒÔÍ¨¹ı**mesh proxy data in**Õâ¸öÌØÕ÷Öµ´«ËÍÏàÓ¦µÄPDUÖÁnew device»òÕßnode¡£µ±È»£¬Ò²¿ÉÒÔÍ¨¹ı**mesh proxy data out**Õâ¸öÌØÕ÷Öµ´«ÊäÏàÓ¦µÄPDUÖÁ**provisioner**£»ÄÇÃ´£¬ÕâÁ½¸öÌØÕ÷Öµ³ıÁËÉÏÃæÌá¼°µÄPDUÖ®Íâ£¬Ëü»¹ÄÜ´«ÊäÄÄĞ©ÀàĞÍµÄPDUÄØ£¿ÏÔÈ»£¬Ğ¡±àÕâÃ´ËµÄÇÃ´¾Í¿Ï¶¨ÊÇ²»Ö¹ÉÏÊöµÄÁ½ÖÖÀàĞÍPDUÀ²£¬¶Ô°É:smile:¡£ÆäÊµ£¬¸Ãmesh proxy serviceÊÇ¿ÉÒÔ´«ÊäÈçÏÂ¼¸ÖÖÀàĞÍµÄPDU£º
+´ÓÉÏÃæÎÒÃÇ¿ÉÒÔºÜÇå³şµØÁË½âµ½£¬**Mesh Network PDU**¶¼¿ÉÒÔÍ¨¹ı**mesh proxy data in**Õâ¸öÌØÕ÷Öµ´«ËÍÏàÓ¦µÄPDUÖÁnode¡£µ±È»£¬Ò²¿ÉÒÔÍ¨¹ı**mesh proxy data out**Õâ¸öÌØÕ÷Öµ´«ÊäÏàÓ¦µÄPDUÖÁ**provisioner**£»ÄÇÃ´£¬ÕâÁ½¸öÌØÕ÷Öµ³ıÁËÉÏÃæÌá¼°µÄPDUÖ®Íâ£¬Ëü»¹ÄÜ´«ÊäÄÄĞ©ÀàĞÍµÄPDUÄØ£¿ÏÔÈ»£¬Ğ¡±àÕâÃ´ËµÄÇÃ´¾Í¿Ï¶¨ÊÇ²»Ö¹ÉÏÊöµÄÁ½ÖÖÀàĞÍPDUÀ²£¬¶Ô°É:smile:¡£ÆäÊµ£¬¸Ãmesh proxy serviceÊÇ¿ÉÒÔ´«ÊäÈçÏÂ¼¸ÖÖÀàĞÍµÄPDU£º
 
 - Network PDU
 - Mesh Beacon
 - Proxy Configuration
-- Provisioning PDU
 
-ÆäÖĞ**Mesh Beacon**ÊÇNode-->provisioner·¢ËÍ**mesh secure network beacon**£¬¶ø**Proxy Configuration**ÔòÊÇÓÃÓÚProxy ClientÓëProxy ServerÖ®¼ä½»»¥ProxyÅäÖÃĞÅÏ¢£¬Ö÷ÒªÓÃÓÚ½«Ä¿±êµØÖ·ĞÂÔöÖÁ°×Ãûµ¥»òÕßºÚÃûµ¥,»ò´Ó°×Ãûµ¥ºÍºÚÃûµ¥ÖĞÒÆ³ı£¬Æğµ½¹ıÂËµÄ×÷ÓÃ¡£
-### Proxy PDU
+ÆäÖĞ**Mesh Beacon**ÊÇNode-->provisioner·¢ËÍ**mesh secure network beacon**£¬¶ø**Proxy Configuration**ÔòÊÇÓÃÓÚProxy ClientÓëProxy ServerÖ®¼ä½»»¥ProxyÅäÖÃĞÅÏ¢£¬Ö÷ÒªÓÃÓÚ½«Ä¿±êµØÖ·ĞÂÔöÖÁ°×Ãûµ¥»òÕßºÚÃûµ¥,»ò´Ó°×Ãûµ¥ºÍºÚÃûµ¥ÖĞÒÆ³ı£¬Æğµ½¹ıÂËµÄ×÷ÓÃ£»ÏÔÈ»£¬¸Ã·şÎñµÄ×÷ÓÃÊÇÓÃÓÚÈëÍøÖ®ºó£¬ÒÔÉÏÀàĞÍPDUµÄÊı¾İ½»»¥¡£
+
+## Proxy PDU
 Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬**Network PDUs**¡¢**mesh beacons**¡¢**proxy configuration messages**»òÕß**Provisioning PDUs**¡£Í¬Ê±£¬µ¥Ò»µÄProxy PDU¿ÉÒÔ°üÀ¨Ò»Ö¡ÍêÕûµÄÊı¾İ£¬Ò²¿ÉÒÔÊÇ·Ö°üµÄÊı¾İ£»**»¹ÓĞÒ»µãÒª×¢Òâ£¡£¡£¡£¬Proxy PDUµÄ³¤¶È´óĞ¡ÊÇ¸ù¾İATT_MTUÀ´¾ö¶¨µÄ**£»½ÓÏÂÀ´£¬ÈÃÎÒÃÇ¿´¿´Proxy PDUµÄÕæÃæÄ¿ÊÇÔõÃ´ÑùµÄ£»µ«ÊÇ£¬±¾ÕÂ½ÚÖ÷Òª½²½â**Provisioning PDUs**¡£
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Proxy_PDU.png)
+![](../Material%20library/Proxy_PDU.png)
 
 ÓÉÉÏÍ¼¿ÉÖª£¬Proxy PDUÓÉÈı¸ö×Ö¶Î×é³É£º
 - SAR
 - Type
 - Data
-#### SAR
+
+### SAR
 ¸Õ¿ªÊ¼¿´µ½Õâ¸ö×Ö¶Î£¬ÎÒÏë´ó¶àÊıÈË¶¼ºÜÄÑÀí½âÆäº¬Òå¡£ÒòÎª£¬ÄãºÜÄÑ²Â²âµÃµ½ÆäÈ«³ÆÊÇÉ¶£»ÆäÊµ£¬ÆäÈ«³Æ¾ÍÊÇ**Message segmentation and reassembly**£¬µ±ÎÒ¿´µ½È«³ÆÖ®ºó¾ÍºÜÈİÒ×Àí½âÀ²£»ÏÔÈ»ÆäÊÇÓÃÓÚÖ¸Ê¾µ±Ç°µÄÊı¾İ°üÊÇÒ»Ö¡ÍêÕûµÄ°ü»¹ÊÇ·Ö°ü¡£ÄÇÃ´£¬·Ö°üºÍÍêÕû°üÓ¦¸ÃÈçºÎ±íÊöÄØ£¿
 
 | Value | Description |
@@ -76,13 +89,15 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 
 - ÍêÕûµÄÒ»Ö¡
 
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Complete_Mesh_Proxy_PDU.png)
+    ![](../Material%20library/Complete_Mesh_Proxy_PDU.png)
 - ¶à¸öÖ¡°ü
 
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Segmentation_Mesh_Proxy_PDU_1.png)
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Segmentation_Mesh_Proxy_PDU_2.png)
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Segmentation_Mesh_Proxy_PDU_3.png)
-#### Type
+    ![](../Material%20library/Segmentation_Mesh_Proxy_PDU_1.png)
+    ![](../Material%20library/Segmentation_Mesh_Proxy_PDU_2.png)
+    ![](../Material%20library/Segmentation_Mesh_Proxy_PDU_3.png)
+
+
+### Type
 Õâ¸ö×Ö¶Î¾ÍÊÇ±íÃ÷µ±Ç°Ğ¯´øµÄPDUÊÇÊ²Ã´ÀàĞÍµÄ£¬Ò²¾ÍÊÇÎÒÇ°ÃæËùËµµÄProxy PDUÄÜ´«ÊäÄÄ¼¸ÖÖÀàĞÍµÄÊı¾İ£º
 
 | Type | Name |
@@ -91,7 +106,8 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 |0x01|Mesh Beacon|
 |0x02|Proxy Configuration|
 |0x03|Provisioning PDU|
-#### Data
+
+### Data
 ¸Ã×Ö¶Î¸ù¾İTypeµÄÀàĞÍ£¬È»ºóÔÙÌî³äÏàÓ¦µÄÊı¾İ¡£µ«ÊÇ£¬ÈëÍøµÄÕû¸ö¹ı³Ì¶¼ÊÇProvisioning PDU£¬¶øProvisioning PDUÓÖ·ÖºÃ¼¸ÖÖÀàĞÍ£º
 
 | Type | Name |
@@ -107,9 +123,10 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 |0x08|Provisioning Complete|
 |0x09|Provisioning Failed|
 |0x0A-0xFF|RFU|
+
 ### Provisioning PDU
 ¸ÃPDUµÄÖ÷ÒªÓÃÓÚprovisionerÓënew deviceµÄ½»»¥£¬¾ßÌåµÄÖ¡¸ñÊ½ÈçÏÂ£º
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Provisioning_PDU.png)  
+![](../Material%20library/Provisioning_PDU.png)  
 
 ÉÏÍ¼ÏÔÊ¾µÄ¾ÍÊÇÕû¸öProvisioning PDUµÄÖ¡¸ñÊ½£¬°üÀ¨Õû¸öÈëÍø¹ı³ÌËùÓÃµ½µÄËùÓĞÖ¡ÀàĞÍ¡£
 
@@ -128,13 +145,13 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 - ÈëÍøÖ®ºóµÄÉè±¸·¢ËÍ³öÀ´µÄÊÇSecure Network Beacon
 - Î´ÈëÍøµÄÉè±¸Ôò·¢ËÍ³öÀ´µÄÊÇUnprovisioned Device Beacon
 
-¶ÔÉÏÊöBeaconÖ¡¸ñÊ½µÄÃèÊö£¬±¾ÆªÕÂ²»ÔÙÏ¸Êö£»Ğ¡±àÒÑ¾­ÔÚÉÏÒ»ÆªÕÂ[Mesh BeaconÖ¡¸ñÊ½](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)ÖĞ½²½âÁË¡£
+¶ÔÉÏÊöBeaconÖ¡¸ñÊ½µÄÃèÊö£¬±¾ÆªÕÂ²»ÔÙÏ¸Êö£»Ğ¡±àÒÑ¾­ÔÚÉÏÒ»ÆªÕÂ[Mesh BeaconÖ¡¸ñÊ½](/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)ÖĞ½²½âÁË¡£
 ## ÑûÇë
 Õâ¸ö¶¯×÷ÊÇprovisionerÖ÷¶¯·¢ÆğµÄ£¬µ±Æä·¢ÏÖ¶Ô¶ËÉè±¸ÊÇunprovisioned deviceÊ±£¬±ã»áÏòÎ´ÈëÍøµÄÉè±¸·¢³öÑûÇë£»¶øÆä°üº¬ÁËÁ½¸ö²½Öè£º
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Provisioning_invitation.png)
+![](../Material%20library/Provisioning_invitation.png)
 ### Provisioning Invite
 Ê×ÏÈ£¬provisionerÍ¨¹ı**mesh proxy data in**ÌØÕ÷ÖµÒÔWrite CommandµÄĞÎÊ½Ğ´Èë**Provisioning Invite PDU**£¬¸ÃÀàĞÍµÄÖ¡ÄÚÈİ½ö°üÀ¨**attention time**£¬¾ÍÊÇ¸øÓènew deviceÒ»¸öÊ±¼äÖµ£¬È»ºó×ö³öÈÎºÎ¿ÉÒÔÒıÆğÖÜ±ßÊÂÎï×¢ÒâµÄ¶¯×÷Ê±³¤Îª**attention time**Ãë£¬¾ßÌåµÄÖ¡¸ñÊ½ÈçÏÂ£º
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Provisioning_Invite_PDU.png)
+![](../Material%20library/Provisioning_Invite_PDU.png)
 
 ### Provisioning Capabilities
 ¸ÃPDUÊÇnew device·¢¸øprovisionerµÄ£¬ÄÚÈİ»á±È½Ï¸´ÔÓ£»Ö÷ÒªÊÇÓÃÓÚ¸æËßprovisionerÎÒnew device¾ß±¸ÄÄĞ©ÄÜÁ¦£¬ÕâĞ©ÄÜÁ¦Ò²¾ÍÓ°Ïì×ÅºóĞøµÄÒ»ĞòÁĞ¶¯×÷£¬Èç¹«Ô¿µÄ½»»¥¡¢ÈÏÖ¤µÈµÈ¡£ÄÇÃ´ËüÃÇ¾ßÌåÊÇÄÄĞ©ÄÚÈİÄØ£¿Çë¿´ÏÂ±íËùÊö£º
@@ -151,9 +168,9 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 |Input OOB Action|2|Supported Input OOB Actions|
 
 ÓÉÉÏ±í¿ÉÖª£¬Éæ¼°µÄÄÚÈİÖ÷Òª¼¯ÖĞÔÚOOBµÄ·½Ê½£¬ÓĞÊäÈëÒ²ÓĞÊä³ö£»ÄÇ½ÓÏÂÀ´ÎÒÃÇ¾Í·Ö±ğ¿´¿´ËüÃÇËù±íÊ¾µÄ¹¦ÄÜ¡£
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Provisioning_Capabilities_PDU.png)  
+![](../Material%20library/Provisioning_Capabilities_PDU.png)  
 #### Number of Elements
-ÏÔÈ»Õâ¸ö×Ö¶ÎËù±íÊ¾µÄÊÇµ±Ç°Õâ¸önew device¾ß±¸¶àÉÙ¸öÔªËØ£¬¶øÇÒnew deviceÓĞÇÒÖÁÉÙÒ»¸öÔªËØ,ÖÁ¶à255¸ö¡£ÖÁÓÚÊ²Ã´ÊÇÔªËØ£¿¿ÉÒÔ²Î¿¼Ğ¡±àÉÏ¼¸¸öÕÂ½ÚĞ´µÄ[Ê²Ã´ÊÇElementºÍModel](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BB%80%E4%B9%88%E6%98%AFElement%E5%92%8CModel.md)
+ÏÔÈ»Õâ¸ö×Ö¶ÎËù±íÊ¾µÄÊÇµ±Ç°Õâ¸önew device¾ß±¸¶àÉÙ¸öÔªËØ£¬¶øÇÒnew deviceÓĞÇÒÖÁÉÙÒ»¸öÔªËØ,ÖÁ¶à255¸ö¡£ÖÁÓÚÊ²Ã´ÊÇÔªËØ£¿¿ÉÒÔ²Î¿¼Ğ¡±àÉÏ¼¸¸öÕÂ½ÚĞ´µÄ[Ê²Ã´ÊÇElementºÍModel](../%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E4%BB%80%E4%B9%88%E6%98%AFElement%E5%92%8CModel.md)
 
 | Value | Description|
 |-----|-----|
@@ -169,7 +186,7 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 |1-15|Reserved for Future Use|
 
 #### Public Key Type
-¸Ã×Ö¶Î±íÊ¾µ±Ç°µÄnew deviceÖ§³ÖÊ²Ã´ÀàĞÍµÄ¹«Ô¿¡£Ä¿Ç°ÎªÖ¹£¬½öÖ§³ÖOOB·½Ê½µÄ¹«Ô¿¡£ÕâÒ²¾ÍÊÇËµ¹«Ô¿¿ÉÒÔÍ¨¹ıOOB·½Ê½Óëprovisioner½øĞĞ½»»¥¡£²»ÖªµÀ¶ÁÕß»¹ÓĞÃ»ÓĞÓ¡Ïó£¬ÔÚÎÒÃÇµÄ[Mesh BeaconÖ¡¸ñÊ½](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)ÖĞÓĞÌá¼°µ½**OOB Information**£¬ÄÇĞ©ĞÅÏ¢¾ÍÊÇ¸æËß´ó¼Ò¿ÉÒÔ²ÉÓÃÄÄÖÖ·½Ê½À´´«µİ¹«Ô¿¡£µ±È»À²ÕâÒ²²»Ç¿ÖÆÒªÇó£¬ÄãÒ²¿ÉÒÔ²»ÓÃOOBµÄ·½Ê½À´´«µİ¹«Ô¿£¬¶øÊÇÊ¹ÓÃËæ»úÉú³ÉµÄ¹«Ô¿¡£Í¬Ê±£¬¹«Ô¿µÄ³¤¶ÈÈ¡¾öÓÚËùÑ¡ÓÃµÄ¼ÓÃÜËã·¨£¬ÕâÀïÎÒÃÇÓĞÇÒ½öÄÜÑ¡Ôñ**FIPS P-256 Elliptic Curve**Ëã·¨£¬¼´¹«Ô¿µÄ³¤¶È¾ÍÊÇ**32×Ö½Ú** **(±¾ÎÄËùÕ¹Ê¾µÄTraces£¬¾ùÎ´²ÉÓÃOOB)**¡£
+¸Ã×Ö¶Î±íÊ¾µ±Ç°µÄnew deviceÖ§³ÖÊ²Ã´ÀàĞÍµÄ¹«Ô¿¡£Ä¿Ç°ÎªÖ¹£¬½öÖ§³ÖOOB·½Ê½µÄ¹«Ô¿¡£ÕâÒ²¾ÍÊÇËµ¹«Ô¿¿ÉÒÔÍ¨¹ıOOB·½Ê½Óëprovisioner½øĞĞ½»»¥¡£²»ÖªµÀ¶ÁÕß»¹ÓĞÃ»ÓĞÓ¡Ïó£¬ÔÚÎÒÃÇµÄ[Mesh BeaconÖ¡¸ñÊ½](/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)ÖĞÓĞÌá¼°µ½**OOB Information**£¬ÄÇĞ©ĞÅÏ¢¾ÍÊÇ¸æËß´ó¼Ò¿ÉÒÔ²ÉÓÃÄÄÖÖ·½Ê½À´´«µİ¹«Ô¿¡£µ±È»À²ÕâÒ²²»Ç¿ÖÆÒªÇó£¬ÄãÒ²¿ÉÒÔ²»ÓÃOOBµÄ·½Ê½À´´«µİ¹«Ô¿£¬¶øÊÇÊ¹ÓÃËæ»úÉú³ÉµÄ¹«Ô¿¡£Í¬Ê±£¬¹«Ô¿µÄ³¤¶ÈÈ¡¾öÓÚËùÑ¡ÓÃµÄ¼ÓÃÜËã·¨£¬ÕâÀïÎÒÃÇÓĞÇÒ½öÄÜÑ¡Ôñ**FIPS P-256 Elliptic Curve**Ëã·¨£¬¼´¹«Ô¿µÄ³¤¶È¾ÍÊÇ**32×Ö½Ú** **(±¾ÎÄËùÕ¹Ê¾µÄTraces£¬¾ùÎ´²ÉÓÃOOB)**¡£
 - OOB Information
 
     | Bit | Description |
@@ -272,7 +289,7 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 |Authentication Size|1|Size of the Output OOB used or size of the Input OOB used or 0x00|
 
 ÒÔÉÏÃèÊöÁË¸ÃPDU¸÷¸ö×Ö¶ÎµÄº¬Òå£¬ÄÇÃ´ÔÚÕæÊµµÄÎïÀíÊÀ½çÖĞËüÃÇÓÖÊÇÒÔÊ²Ã´·½Ê½ÌåÏÖµÄÄØ£¿
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Provisioning_Start.png)
+![](../Material%20library/Provisioning_Start.png)
 
 ÊÇ²»ÊÇ¸úÉÏÊö±í¸ñÖĞµÄÄÚÈİÒ»Ä£Ò»Ñù£¿ËùÒÔËµSIG MeshÒ²²»ÊÇÊ²Ã´Ä§¹í£¬ËüÃÇÒ²ÊÇÓĞ±ê×¼¿ÉÑ­µÄ¡£
 #### Algorithm
@@ -296,12 +313,12 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 
 - No OOB Public Key is used
     
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Start_without_OOB_Public_Key.png)
+    ![](../Material%20library/Start_without_OOB_Public_Key.png)
     
     ÓÉÉÏÍ¼¿ÉÖª£¬Èç¹û²»Ê¹ÓÃOOB·½Ê½µÄ¹«Ô¿£¬ÄÇÃ´¹«Ô¿ÓÉprovisionerºÍnew device¸÷×Ô²úÉú²¢Ïà»¥½»»»£»
 - OOB Public Key is used
 
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Start_using_OOB_Public_Key.png)  
+    ![](../Material%20library/Start_using_OOB_Public_Key.png)  
     Èç¹ûÊÇÊ¹ÓÃÁËOOB·½Ê½µÄ¹«Ô¿£¬ÄÇÃ´provisionerÍ¨¹ıOOBµÄ·½Ê½´Ónew device»ñÈ¡µÃµ½¹«Ô¿£¬È»ºóprovisioner×ÔÒÑÉú³ÉÒ»¸ö¹«Ô¿ÔÙ´«ËÍ¸ønew device£»¶ønew device´ËÊ±²»ÓÃÔÙ´«¹«Ô¿¸øprovisionerÁË£¬ÒòÎªprovisionerÒÑ¾­Í¨¹ıOOBµÄ·½Ê½»ñÈ¡µÃµ½new deviceµÄ¹«Ô¿ÁË£»
 
 ²»¹ÜÊÇprovisioner»¹ÊÇnew device¶¼Òª¼ìÑé¹«Ô¿µÄÓĞĞ§ĞÔ£¬Èç¹ûÓĞĞ§£¬ÔòÊ¹ÓÃ¹«Ô¿Í¨¹ıÏÂÃæµÄ¹«Ê½¼ÆËãµÃ³ö**ECDHSecret**£º
@@ -324,7 +341,7 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
 - 0x00
     
     Authentication ActionºÍSize×Ö¶ÎµÄÄÚÈİ¾ùÎª0x00£¬Èç[Provisioning start](#provisioning-start)ÕÂ½ÚÖĞµÄ½ØÍ¼ËùÊ¾£»
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Authentication_with_static_OOB_or_no_OOB.png)
+    ![](../Material%20library/Authentication_with_static_OOB_or_no_OOB.png)
 
     ÎÒÃÇ¿ÉÒÔ´ÓÉÏÊöµÄUMLÍ¼¿ÉÒÔÇå³şµØ¿´µ½£¬Èç¹ûÊ¹ÓÃNo OOBµÄ·½Ê½µÄ»°£¬¾ÍÃ»ÓĞÁËInputºÍOutputµÄ¹ı³Ì£¬ÎÒÃÇÒ²¿ÉÒÔºÁ²»¿äÕÅµØËµÕâÖÖÇé¿öÊÇÃ»ÓĞ¾­¹ıÈÏÖ¤µÄ£¬ÒòÎª´ËÊ±µÄauthentication ValueÈ«ÊÇ0x00¡£Ë«·½Ö±½Ó½øĞĞ**Provisioning Confirmation PDU**½»»¥£¬ÄÇÃ´¸ÃPDUÊÇÊ²Ã´ÄØ£¿ÎÒÃÇ¿ÉÒÔÔÚÏÂÃæµÄ[Provisioning Confirmation](#provisioning-confirmation)ÕÒµ½´ğ°¸;
 - 0x01
@@ -349,8 +366,9 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
         |0x00|Prohibited|
         |0x01¨C0x08|The Output OOB Size to be used|
         |0x09¨C0xFF|Reserved for Future Use|
+        
     »ù±¾ÉÏ£¬¸ú[Output OOB Action](#Output-OOB-Action)Óë[Output OOB Size](#Output-OOB-Size)µÄÄÚÈİÊÇÒ»Ä£Ò»ÑùµÄ¡£
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Authentication_with_Output_OOB.png)
+    ![](../Material%20library/Authentication_with_Output_OOB.png)
 
     Èç¹ûÊÇÖ´ĞĞµ½Õâ¸ö²½Öè£¬Ğ¡±à¾õµÃ»¹ÊÇ¾õµÃÓĞ±ØÒªÈ¥³ÎÇåÒ»ÏÂµÄ£»¶ÔÓÚÈç¹ûAuthentication ActionÊÇBlink¡¢BeepÒÔ¼°VibrateÆäÖĞµÄÒ»¸ö,ÄÇÃ´ÊÇÓÉnew device´Ó1-**Output OOB Size**µÄÖĞËæ»úÑ¡È¡Ò»¸öÊı×Ö²¢Í¨¹ıËùÑ¡ÖĞµÄActionÈ¥Êä³öÕâ¸öÊı×Ö£»ÀıÈç£¬new deviceÊÇÒ»¸ö°üº¬LEDÖ¸Ê¾µÆµÄÃÅËø£¬ÄÇÃ´ÆäAuthentication action¾ÍÊÇBlink£¬¶øÆäÊä³öÊı×ÖµÄ·½·¨ÔòÊÇÍ¨¹ıÉÁË¸µÄ´ÎÊıÈ¥ÏòProvisioner´«´ïnew device´Ó1-**Output OOB Size**µÄÖĞÑ¡ÖĞµÄËæ»úÊı£»Èç¹ûauthentication actionÊÇOutput Numeric»òÕßOutput Alphanumeric£¬ÄÇÃ´new device»á¸ù¾İauthentication sizeµÄÖµÊä³öÏà¶ÔÓ¦¸öÊıµÄ´óĞ´×ÖÄ¸»òÕßÊı×Ö»òÕß×ÖÄ¸ºÍÊı×Ö»ìºÏ¡£
 - 0x03
@@ -364,6 +382,7 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
         |0x02|Input Numeric|
         |0x03|Input Alphanumeric|
         |0x04-0xFF|Reserved for Future Use|
+
     - Authentication SizeµÄÄÚÈİÓÉÏÂ±í¾ö¶¨£º
 
         | Value | Description|
@@ -371,8 +390,9 @@ Proxy¿Í»§¶ËÍ¨¹ıProxy PDUÓëProxy·şÎñ¶Ë½øĞĞÊı¾İ½»»¥£»ÈçÉÏËùÊö£¬Proxy PDUs¿ÉÒÔ°üº¬*
         |0x00|Prohibited|
         |0x01¨C0x08|The Input OOB Size to be used|
         |0x09¨C0xFF|Reserved for Future Use|
+        
     Í¬ÑùµÄ£¬¸ú[Input OOB Action](#Input-OOB-Action)Óë[Input OOB Size](#Input-OOB-Size)µÄÄÚÈİÊÇÒ»Ä£Ò»ÑùµÄ¡£
-    ![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/Authentication_with_Input_OOB.png)
+    ![](../Material%20library/Authentication_with_Input_OOB.png)
     
     ÉÏÊöµÄÁ÷³ÌËù´«´ïµÄº¬Òå¸úÉÏÃæµÄOutput OOB authenticationÊÇ»ù±¾Ò»ÖÂµÄ¡£Ö»ÊÇÊä³ö±ä³ÉÊäÈë¶øÒÑ£»
 
@@ -447,7 +467,7 @@ ProvisionerÓënew device»á¸÷×Ô½«Ä¿Ç°ÎªÖ¹ËùÓĞÒÑ¾­½»»¥¹ıµÄPDU **£¨°üÀ¨·¢ËÍµÄºÍ½ÓÊÕµ
     | 1 | IV Update Flag (0: Normal operation  1: IV Update active)    |
     | 2¨C7 | Reserved for Future Use     |
 
-    ¸ÃÄÚÈİÎÒÃÇÔÚ[Mesh BeaconÖ¡¸ñÊ½](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)Ò²ÓĞÌá¼°£»
+    ¸ÃÄÚÈİÎÒÃÇÔÚ[Mesh BeaconÖ¡¸ñÊ½](/%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)Ò²ÓĞÌá¼°£»
 
 - IV Index
 
@@ -476,4 +496,4 @@ ProvisionerÓënew device»á¸÷×Ô½«Ä¿Ç°ÎªÖ¹ËùÓĞÒÑ¾­½»»¥¹ıµÄPDU **£¨°üÀ¨·¢ËÍµÄºÍ½ÓÊÕµ
 |0x09|RFU|Reserved for Future Use|
 
 ÖÁ´Ë£¬Õû¸öÈëÍøÁ÷³ÌÍê³É¡£¸ãÁËÕâÃ´¶à²½Öè¾ÍÊÇÎªÁË»ñÈ¡µÃµ½×îÖÕµÄprovisioning dataµÄÄÚÈİ¡£ÕâÒ²ÒâÎ¶×Å¸ÃÆª½ÚÒ²×îÖÕÍê¸åÁË£¬¿ÉÄÜÓĞÈË¾õµÃÕâ¸öÌ«¸´ÔÓÁË£¬ÆäÊµĞ¡±àĞ´Íê±¾ÆªÎÄÕÂÒ²¿ì¡°Á÷Àá¡±ÁË£¬ÎªÁËÏÔÏÖÍêÕûµÄÈëÍø¹ı³ÌºÍ¸÷¸öÏ¸½Ú£¬×ã×ãĞ´ÁË¿ìÒ»¸öĞÇÆÚÁË£¡£¡£¡²»³öÒâÍâµÄ»°£¬Ó¦¸ÃÊÇÈ«Íø×îÏêÏ¸µÄÈëÍøÁ÷³ÌËµÃ÷ÁË¡£
-![](https://github.com/xiaolongba/HX_DK_FOR_NORDIC_52840_BLE_MESH_PUBLIC/blob/master/Material%20library/I_AM_SO_DIFFICULT.gif)
+![](../Material%20library/I_AM_SO_DIFFICULT.gif)
