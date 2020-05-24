@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2020-04-22 20:55:14
+ * @LastEditTime: 2020-05-24 13:21:46
  * @LastEditors: Please set LastEditors
  -->
 [![](./Material%20library/HX_DK_LOGO_Brochure.png)](https://shop166249478.taobao.com/?spm=2013.1.1000126.2.83541257ISvzi3)
@@ -35,15 +35,33 @@
 1. [Friend Node与Low Power Node详解及其工作流程]()---仅向VIP用户开放
 
 ## 步入社会
-1. [Multi Role的实现]()---未完成
-1. [Vendor Model的浅析]()---未完成
-1. [创建红旭Model]()---未完成
-1. [涵括所有Mesh Role节点的工程]()---未完成
+1. [Multi Role的实现]()------仅向VIP用户开放
+1. [Vendor Model的浅析]()------仅向VIP用户开放
+1. [创建红旭Model]()---正在进行ING……
+1. [自主分包与MESH协议分包重组的区别]()---未完成
 1. [接入天猫精灵]()---未完成
 
 ## 安全
 1. [IV更新过程]()---未完成
 1. [KEY更新过程]()---未完成
+
+## 妥协
+该子标题之所以命名为**妥协**，因为不知道为什么总会有部分关注我们的朋友问“你们有BLE Mesh的教程吗？太理论的东西我看不下去，希望能有一些实战直接上手的教程”；暂且不说这样对不对，反正小编是很反感这种学习方式。但是，似乎确实有部分这样的朋友；因此，为了满足多元化的需求，我们专门开设了妥协篇用于直接就**上马横刀**的实战教程，具体目录如下：
+1. [基于Nordic平台，搭建BLE Mesh开发环境]()---未完成
+2. [不同认证方式的BLE Mesh入网过程]()---未完成
+3. [如何实现单播、组播]()---未完成
+4. [如何实现基于按键的单播、组播]()---未完成
+5. [实现Friend节点与Low Power节点的交互]()---未完成
+6. [如何将设备配置为Provisioner并创建BLE Mesh网络]()---未完成
+7. [Multi Role的实现]()---未完成
+8. [Vendor Model的浅析]()---未完成
+9. [创建红旭Model]()---未完成
+10. [在BLE Mesh网络中实现大数据的透传]()---未完成
+11. [涵括所有Mesh Role节点的工程]()---未完成
+12. [接入天猫精灵]()---未完成
+13. [通过HeartBeat包实现节点的掉线监控]()---未完成
+14. [设备为Provisioner,对节点的增删减查]()---未完成
+15. 其他的教程补充ING……
 
 # SIG MESH技术交流
 1. Github的Issues
