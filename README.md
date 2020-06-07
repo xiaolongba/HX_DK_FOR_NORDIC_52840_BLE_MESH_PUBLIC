@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2020-05-24 13:21:46
+ * @LastEditTime: 2020-06-07 16:41:19
  * @LastEditors: Please set LastEditors
  -->
 [![](./Material%20library/HX_DK_LOGO_Brochure.png)](https://shop166249478.taobao.com/?spm=2013.1.1000126.2.83541257ISvzi3)
@@ -37,8 +37,8 @@
 ## 步入社会
 1. [Multi Role的实现]()------仅向VIP用户开放
 1. [Vendor Model的浅析]()------仅向VIP用户开放
-1. [创建红旭Model]()---正在进行ING……
-1. [自主分包与MESH协议分包重组的区别]()---未完成
+1. [创建红旭Model]()------仅向VIP用户开放
+1. [自主分包与MESH协议分包重组的区别]()---正在进行ING……
 1. [接入天猫精灵]()---未完成
 
 ## 安全
