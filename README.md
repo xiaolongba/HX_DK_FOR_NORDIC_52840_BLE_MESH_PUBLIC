@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2020-06-07 16:41:19
+ * @LastEditTime: 2020-08-20 09:58:26
  * @LastEditors: Please set LastEditors
  -->
 [![](./Material%20library/HX_DK_LOGO_Brochure.png)](https://shop166249478.taobao.com/?spm=2013.1.1000126.2.83541257ISvzi3)
@@ -24,7 +24,7 @@
 1. [Mesh Beacon帧格式](./%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/Mesh%20Beacon%E5%B8%A7%E6%A0%BC%E5%BC%8F.md)
 1. [PB-GATT入网过程](./%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/PB-GATT%E5%85%A5%E7%BD%91%E8%BF%87%E7%A8%8B.md)
 1. [PB-ADV入网过程](./%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/PB-ADV%E5%85%A5%E7%BD%91%E8%BF%87%E7%A8%8B.md)
-1. [SIG MESH第一个实例---Generic On Off Model]()---待发布
+1. [SIG MESH第一个实例---Generic On Off Model](./新手入门/SIG%20MESH第一个实例---Generic%20On%20Off%20Model.md)
 1. [各个层帧包格式详解]()---仅向VIP用户开放
 
 ## 初出茅庐
@@ -35,15 +35,15 @@
 1. [Friend Node与Low Power Node详解及其工作流程]()---仅向VIP用户开放
 
 ## 步入社会
-1. [Multi Role的实现]()------仅向VIP用户开放
-1. [Vendor Model的浅析]()------仅向VIP用户开放
-1. [创建红旭Model]()------仅向VIP用户开放
-1. [自主分包与MESH协议分包重组的区别]()---正在进行ING……
-1. [接入天猫精灵]()---未完成
+1. [Multi Role的实现]()---仅向VIP用户开放
+1. [Vendor Model的浅析]()---仅向VIP用户开放
+1. [创建红旭Model]()---仅向VIP用户开放
+1. [自主分包与MESH协议分包重组的区别]()---仅向VIP用户开放
+1. [接入天猫精灵]()---仅向VIP用户开放
 
 ## 安全
-1. [IV更新过程]()---未完成
-1. [KEY更新过程]()---未完成
+1. [IV更新过程]()---正在进行ING
+1. [KEY更新过程]()---仅向VIP用户开放
 
 ## 妥协
 该子标题之所以命名为**妥协**，因为不知道为什么总会有部分关注我们的朋友问“你们有BLE Mesh的教程吗？太理论的东西我看不下去，希望能有一些实战直接上手的教程”；暂且不说这样对不对，反正小编是很反感这种学习方式。但是，似乎确实有部分这样的朋友；因此，为了满足多元化的需求，我们专门开设了妥协篇用于直接就**上马横刀**的实战教程，具体目录如下：
