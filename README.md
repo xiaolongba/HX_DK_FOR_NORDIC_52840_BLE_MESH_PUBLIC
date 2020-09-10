@@ -2,7 +2,7 @@
  * @Description: The index of HX Mesh Tutorials
  * @Author: Helon CHEN
  * @Date: 2019-07-27 18:02:49
- * @LastEditTime: 2020-08-20 09:58:26
+ * @LastEditTime: 2020-09-10 10:21:51
  * @LastEditors: Please set LastEditors
  -->
 [![](./Material%20library/HX_DK_LOGO_Brochure.png)](https://shop166249478.taobao.com/?spm=2013.1.1000126.2.83541257ISvzi3)
@@ -42,7 +42,7 @@
 1. [接入天猫精灵]()---仅向VIP用户开放
 
 ## 安全
-1. [IV更新过程]()---正在进行ING
+1. [IV更新过程]()---仅向VIP用户开放
 1. [KEY更新过程]()---仅向VIP用户开放
 
 ## 妥协
